@@ -1,7 +1,8 @@
 #!/bin/bash      
-#author		 : Ogochukwu Ozotta
-#CopyRights      : Ogochukwu Ozotta
-#Contact         : +1 832 206 4158
+#author		: Ogochukwu Ozotta
+#CopyRights     : Ogochukwu Ozotta
+#Contact        : +1 832 206 4158
+#Purpose 	: CREATING SSHKEYS IN THE GITHUB VIA AUTOMATION
 echo "Enter your GitHub Personal Access Token (PAT):"
 read token
 #echo $token >token.txt
