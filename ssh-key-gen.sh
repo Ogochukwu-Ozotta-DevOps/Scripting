@@ -13,7 +13,7 @@ if [ $? -eq 0 ]
 then
 	echo "SSH Keys are already present..."
 else	
-echo "SSH Keys are are not present..., Create the sshkyes using ssh-keygen command"
+echo "SSH Keys are are not present..., Create the sshkeys using ssh-keygen command"
 ssh-keygen -t rsa
 echo "Key successfully generated"
 fi
