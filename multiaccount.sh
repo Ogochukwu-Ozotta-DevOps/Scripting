@@ -1,4 +1,4 @@
-~#/bin.sh
+#!/bin.sh
 input="users.csv"
 while IFS=',' read -r loginname name
 do
