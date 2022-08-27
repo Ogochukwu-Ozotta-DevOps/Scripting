@@ -20,10 +20,11 @@ fi
 sshkey=`cat ~/.ssh/id_rsa.pub`
 if [ $? -eq 0 ]
 then
+then
 echo "Copying the key to GitHub account"
-curl -X POST -H "Content-type: application/json" -d "{\"title\": \"SSHKEY\",\"key\": \"$sshkey\"}" "https://api.github.com/user/keys?access_token=$token"
+curl  -X POST -H "Accept: application/vnd.github+json" -H "Authorization: token $token" -d "{\"title\": \"SSHKEY\",\"key\": \"$sshkey\"}"   https://api.github.com/user/keys
 if [ $? -eq 0 ]
-then 
+then
 echo "Successfully copied the token to GitHub"
 exit 0
 else
@@ -34,3 +35,4 @@ else
 echo "Failure in generating the key"
 exit 1
 fi
+
