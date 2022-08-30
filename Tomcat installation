@@ -1,0 +1,31 @@
+#author		      : Ogochukwu Ozotta
+#CopyRights     : Ogochukwu Ozotta
+#Date created   : August 30, 2022
+#Contact        : ogochukwu.ozotta@gmail.com
+#Purpose 	      : Tomcat installation using shell script
+#Comment        : Please update the script with the latest jave and tomcat versions
+#last update    : August 30, 2022
+#!/bin/bash
+# install Java JDK 1.8+ as a pre-requisit for tomcat to run.
+sudo hostnamectl set-hostname tomcat
+# to change the hostname, and name will retain even after server reboot
+cd /opt
+sudo yum install git wget unzip -y
+sudo yum install java-1.8.0-openjdk-devel -y
+# Download tomcat software and extract it.
+sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.65/bin/apache-tomcat-9.0.65.tar.gz
+sudo tar -xvf apache-tomcat-9.0.65.tar.gz
+# Extracts the downloaded file 
+sudo rm -rf apache-tomcat-9.0.65.tar.gz
+# Deletes the downloaded file
+sudo mv apache-tomcat-9.0.65 tomcat9
+# Renames the extracted file 
+sudo chmod 777 -R /opt/tomcat9
+# Change mode to allow read, write and execute
+sudo chown ec2-user -R /opt/tomcat9
+sh /opt/tomcat9/bin/startup.sh
+# create a soft link to start and stop tomcat
+sudo ln -s /opt/tomcat9/bin/startup.sh /usr/bin/starttomcat
+sudo ln -s /opt/tomcat9/bin/shutdown.sh /usr/bin/stoptomcat
+starttomcat
+sudo su - ec2-user
