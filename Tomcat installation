@@ -1,8 +1,7 @@
-# Author		      : Ogochukwu Ozotta
-# CopyRights     : Ogochukwu Ozotta
+# Author		     : Ogochukwu Ozotta
 # Date created   : August 30, 2022
 # Contact        : ogochukwu.ozotta@gmail.com
-# Purpose 	      : Tomcat installation using shell script
+# Purpose 	     : Tomcat installation using shell script
 # Comment        : Please update the script with the latest jave and tomcat versions
 # last update    : August 30, 2022
 #!/bin/bash
