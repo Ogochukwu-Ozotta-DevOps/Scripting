@@ -2,8 +2,8 @@
 # Date created   : August 30, 2022
 # Contact        : ogochukwu.ozotta@gmail.com
 # Purpose 	     : Tomcat installation using shell script
-# Comment        : Please update the script with the latest jave and tomcat versions
-# last update    : August 30, 2022
+# Comment        : Please update the script with the latest java and tomcat versions
+# last update    : September 17, 2022
 #!/bin/bash
 # install Java JDK 1.8+ as a pre-requisit for tomcat to run.
 sudo hostnamectl set-hostname tomcat
